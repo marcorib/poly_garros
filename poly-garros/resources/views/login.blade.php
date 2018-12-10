@@ -37,8 +37,9 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-        }
 
+        }
+       /* lien de la photo de fond admin :  https://unsplash.com/photos/UvQrspA9Wbk*/
         .login-box, .register-box {
             margin: 2% auto;
         }
@@ -60,9 +61,7 @@
 <div class="login-box">
     <div class="login-logo">
         <a href="{{url('/')}}">
-            <img title='{!!(Session::get('appname') == 'CRUDBooster')?"<b>CRUD</b>Booster":CRUDBooster::getSetting('appname')!!}'
-                 src='{{ CRUDBooster::getSetting("logo")?asset(CRUDBooster::getSetting('logo')):asset('vendor/crudbooster/assets/logo_crudbooster.png') }}'
-                 style='max-width: 100%;max-height:170px'/>
+            <h1 style="font-size: 80px ; color: white">PolyGarros</h1>
         </a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
@@ -103,6 +102,9 @@
     </div><!-- /.login-box-body -->
 
 </div><!-- /.login-box -->
+            <img title='{!!(Session::get('appname') == 'CRUDBooster')?"<b>CRUD</b>Booster":CRUDBooster::getSetting('appname')!!}'
+                 src='{{ CRUDBooster::getSetting("logo")?asset(CRUDBooster::getSetting('logo')):asset('vendor/crudbooster/assets/logo.png') }}'
+                 style='max-width: 30%;max-height:60px ; margin-left: 1000px'/>
 
 
 <!-- jQuery 2.1.3 -->

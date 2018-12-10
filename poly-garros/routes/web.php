@@ -12,9 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
-
 
 // Route::get('/note', function () {
 // return view('note');

@@ -38,12 +38,12 @@
 						<div class="panel-footer btn-secondary  ">
 							<div class="">
 								<div class="">
-							 		<label for="comment">Comment:</label>
+							 		<label for="comment">Commentaire:</label>
 									<textarea class="form-control" rows="5" name="comment"></textarea>
 								</div>
-							    <label for="usr">From:</label>
+							    <label for="usr">de:</label>
 								<input type=" " class=" form-control" name="commentFrom" >
-								<label for="pwd">To:</label>
+								<label for="pwd">À:</label>
 								<input type=" " class=" form-control" name="commentTO">
 								<!-- button send -->
 					 

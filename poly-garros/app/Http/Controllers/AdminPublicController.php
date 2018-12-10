@@ -65,7 +65,7 @@
 			$this->form[] = ['label'=>'Lieu Dit','name'=>'personne_lieu_dit','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Code Postal','name'=>'personne_code_postal','type'=>'text','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Ville','name'=>'personne_ville','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Suivi Anterieur','name'=>'personne_suivi_anterieur','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Oui;Non'];
+			$this->form[] = ['label'=>'Suivi Anterieur','name'=>'personne_suivi_anterieur','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'0;1'];
 			$this->form[] = ['label'=>'Contact','name'=>'personne_contact','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aller vers;Téléphone;Venu vers : Bouche à oreille;Orientation : Partenaires;Autre'];
 			$this->form[] = ['label'=>'Tranche Age','name'=>'personne_tranche_age','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'16-17;18-25;26-49;50 et plus'];
 			$this->form[] = ['label'=>'Beneficiaire','name'=>'personne_beneficiaire','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'RSA;AAH;ASS;ARE;ATE;Autre'];

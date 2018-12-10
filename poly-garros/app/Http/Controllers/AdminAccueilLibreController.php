@@ -5,14 +5,14 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminRdvController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminAccueilLibreController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "personne_id";
+			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "rdv_id,desc";
+			$this->orderby = "accueil_libre_id,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -20,42 +20,40 @@
 			$this->button_add = true;
 			$this->button_edit = true;
 			$this->button_delete = true;
-			$this->button_detail = false;
+			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "rdv";
+			$this->table = "accueil_libre";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Date","name"=>"rdv_date"];
-			$this->col[] = ["label"=>"Lieu","name"=>"rdv_lieu"];
-			$this->col[] = ["label"=>"Comentaire","name"=>"rdv_comentaire"];
-			$this->col[] = ["label"=>"Activite","name"=>"rdv_activite"];
-			$this->col[] = ["label"=>"Orientation","name"=>"rdv_orientation"];
-			$this->col[] = ["label"=>"Personne","name"=>"personne_id","join"=>"personne,personne_reference"];
+			$this->col[] = ["label"=>"Date","name"=>"created_at"];
+			$this->col[] = ["label"=>"Heure","name"=>"accueil_libre_heure"];
+			$this->col[] = ["label"=>"Genre","name"=>"accueil_libre_genre"];
+			$this->col[] = ["label"=>"Age","name"=>"accueil_libre_age"];
+			$this->col[] = ["label"=>"Provenance","name"=>"accueil_libre_provenance"];
+			$this->col[] = ["label"=>"Objet","name"=>"accueil_libre_objet"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Date','name'=>'rdv_date','type'=>'datetime','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Lieu','name'=>'rdv_lieu','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Extérieur;Domicile;Partenaires QPV;Partenaires hors QPV;Salle polyvalente'];
-			$this->form[] = ['label'=>'Comentaire','name'=>'rdv_comentaire','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Activite','name'=>'rdv_activite','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Première rencontre;CV et/ou lettre de motivation;Collecter les infos;Informer;Orienter;Accompagnement physique;Aide administrative;Consulter les annonces;Actualisation pole emploi;Création boite mail;Autre'];
-			$this->form[] = ['label'=>'Orientation','name'=>'rdv_orientation','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aide 32;AG2i;A3i;Intérim;Garros services;Mission locale;Pôle emploi;REGAR;Services sociaux;Médical;Autre'];
-			$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
+			$this->form[] = ['label'=>'Heure','name'=>'accueil_libre_heure','type'=>'time','validation'=>'required|date_format:H:i:s','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Genre','name'=>'accueil_libre_genre','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Fille;Garçon'];
+			$this->form[] = ['label'=>'Age','name'=>'accueil_libre_age','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'- 10 ans;10-14 ans;15-17 ans;18-25 ans; + 25 ans'];
+			$this->form[] = ['label'=>'Provenance','name'=>'accueil_libre_provenance','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Quartier;Extérieur'];
+			$this->form[] = ['label'=>'Objet','name'=>'accueil_libre_objet','type'=>'checkbox','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Photocopie/scan/impression ; Téléphone ; Café/thé ; Dossier administratif ; Démarche pôle emploi ;  Courrier/mail ;  Informel ; Informatique'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Date','name'=>'rdv_date','type'=>'datetime','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Lieu','name'=>'rdv_lieu','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Extérieur;Domicile;Partenaires QPV;Partenaires hors QPV;Salle polyvalente'];
-			//$this->form[] = ['label'=>'Comentaire','name'=>'rdv_comentaire','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Activite','name'=>'rdv_activite','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Première rencontre;CV et/ou lettre de motivation;Collecter les infos;Informer;Orienter;Accompagnement physique;Aide administrative;Consulter les annonces;Actualisation pole emploi;Création boite mail;Autre'];
-			//$this->form[] = ['label'=>'Orientation','name'=>'rdv_orientation','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aide 32;AG2i;A3i;Intérim;Garros services;Mission locale;Pôle emploi;REGAR;Services sociaux;Médical;Autre'];
-			//$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Date et Heure','name'=>'accueil_libre_heure','type'=>'datetime','validation'=>'required|date_format:H:i:s','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Genre','name'=>'accueil_libre_genre','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Fille;Garçon'];
+			//$this->form[] = ['label'=>'Age','name'=>'accueil_libre_age','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'- 10 ans;10-14 ans;15-17 ans;18-25 ans; + 25 ans'];
+			//$this->form[] = ['label'=>'Provenance','name'=>'accueil_libre_provenance','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Quartier;Extérieur'];
+			//$this->form[] = ['label'=>'Objet','name'=>'accueil_libre_objet','type'=>'checkbox','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Photocopie/scan/impression ; Téléphone ; Café/thé ; Dossier administratif ; Démarche pôle emploi ;  Courrier/mail ;  Informel ; Informatique'];
 			# OLD END FORM
 
 			/* 
