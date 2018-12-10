@@ -23,7 +23,7 @@ class CmsMenusTableSeeder extends Seeder
                 'name' => 'Public',
                 'type' => 'Route',
                 'path' => 'AdminPublicControllerGetIndex',
-                'color' => NULL,
+                'color' => 'normal',
                 'icon' => 'fa fa-users',
                 'parent_id' => 0,
                 'is_active' => 1,
@@ -31,7 +31,7 @@ class CmsMenusTableSeeder extends Seeder
                 'id_cms_privileges' => 1,
                 'sorting' => 1,
                 'created_at' => '2018-12-06 10:11:13',
-                'updated_at' => NULL,
+                'updated_at' => '2018-12-10 10:54:59',
             ),
             1 => 
             array (
@@ -47,7 +47,7 @@ class CmsMenusTableSeeder extends Seeder
                 'id_cms_privileges' => 1,
                 'sorting' => 3,
                 'created_at' => '2018-12-06 14:39:02',
-                'updated_at' => '2018-12-06 15:55:15',
+                'updated_at' => '2018-12-10 10:55:10',
             ),
             2 => 
             array (
@@ -63,7 +63,39 @@ class CmsMenusTableSeeder extends Seeder
                 'id_cms_privileges' => 1,
                 'sorting' => 4,
                 'created_at' => '2018-12-06 15:09:45',
-                'updated_at' => '2018-12-06 15:51:39',
+                'updated_at' => '2018-12-10 10:55:20',
+            ),
+            3 => 
+            array (
+                'id' => 13,
+                'name' => 'Accueil Libre',
+                'type' => 'Route',
+                'path' => 'AdminAccueilLibreControllerGetIndex',
+                'color' => 'normal',
+                'icon' => 'fa fa-home',
+                'parent_id' => 0,
+                'is_active' => 1,
+                'is_dashboard' => 0,
+                'id_cms_privileges' => 1,
+                'sorting' => 5,
+                'created_at' => '2018-12-10 10:55:45',
+                'updated_at' => '2018-12-10 11:16:16',
+            ),
+            4 => 
+            array (
+                'id' => 14,
+                'name' => 'Note interne',
+                'type' => 'Controller & Method',
+                'path' => 'NoteController@show',
+                'color' => 'normal',
+                'icon' => 'fa fa-book',
+                'parent_id' => 0,
+                'is_active' => 1,
+                'is_dashboard' => 0,
+                'id_cms_privileges' => 1,
+                'sorting' => NULL,
+                'created_at' => '2018-12-10 11:32:10',
+                'updated_at' => '2018-12-10 13:01:34',
             ),
         ));
         

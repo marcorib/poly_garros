@@ -49,57 +49,117 @@ class CmsMenusPrivilegesTableSeeder extends Seeder
             ),
             5 => 
             array (
-                'id' => 6,
-                'id_cms_menus' => 5,
-                'id_cms_privileges' => 1,
-            ),
-            6 => 
-            array (
                 'id' => 7,
                 'id_cms_menus' => 6,
                 'id_cms_privileges' => 1,
             ),
-            7 => 
+            6 => 
             array (
                 'id' => 8,
                 'id_cms_menus' => 7,
                 'id_cms_privileges' => 1,
             ),
-            8 => 
+            7 => 
             array (
                 'id' => 9,
                 'id_cms_menus' => 8,
                 'id_cms_privileges' => 1,
             ),
-            9 => 
+            8 => 
             array (
                 'id' => 10,
                 'id_cms_menus' => 9,
                 'id_cms_privileges' => 1,
             ),
-            10 => 
+            9 => 
             array (
                 'id' => 11,
                 'id_cms_menus' => 10,
                 'id_cms_privileges' => 1,
             ),
+            10 => 
+            array (
+                'id' => 21,
+                'id_cms_menus' => 5,
+                'id_cms_privileges' => 2,
+            ),
             11 => 
             array (
-                'id' => 18,
-                'id_cms_menus' => 13,
+                'id' => 22,
+                'id_cms_menus' => 5,
                 'id_cms_privileges' => 1,
             ),
             12 => 
             array (
-                'id' => 19,
-                'id_cms_menus' => 12,
-                'id_cms_privileges' => 1,
+                'id' => 23,
+                'id_cms_menus' => 5,
+                'id_cms_privileges' => 3,
             ),
             13 => 
             array (
-                'id' => 20,
+                'id' => 24,
+                'id_cms_menus' => 11,
+                'id_cms_privileges' => 2,
+            ),
+            14 => 
+            array (
+                'id' => 25,
                 'id_cms_menus' => 11,
                 'id_cms_privileges' => 1,
+            ),
+            15 => 
+            array (
+                'id' => 26,
+                'id_cms_menus' => 11,
+                'id_cms_privileges' => 3,
+            ),
+            16 => 
+            array (
+                'id' => 27,
+                'id_cms_menus' => 12,
+                'id_cms_privileges' => 2,
+            ),
+            17 => 
+            array (
+                'id' => 28,
+                'id_cms_menus' => 12,
+                'id_cms_privileges' => 1,
+            ),
+            18 => 
+            array (
+                'id' => 29,
+                'id_cms_menus' => 12,
+                'id_cms_privileges' => 3,
+            ),
+            19 => 
+            array (
+                'id' => 31,
+                'id_cms_menus' => 13,
+                'id_cms_privileges' => 4,
+            ),
+            20 => 
+            array (
+                'id' => 32,
+                'id_cms_menus' => 13,
+                'id_cms_privileges' => 1,
+            ),
+            21 => 
+            array (
+                'id' => 45,
+                'id_cms_menus' => 14,
+                'id_cms_privileges' => 2,
+            ),
+            22 => 
+            array (
+                'id' => 46,
+                'id_cms_menus' => 14,
+                'id_cms_privileges' => 1,
+            ),
+            23 => 
+            array (
+                'id' => 47,
+                'id_cms_menus' => 14,
+                'id_cms_privileges' => 3,
             ),
         ));
         

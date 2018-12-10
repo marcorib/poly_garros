@@ -65,6 +65,30 @@ class PersonneTableSeeder extends Seeder
                 'created_at' => '2018-12-06 10:58:18',
                 'updated_at' => NULL,
             ),
+            2 => 
+            array (
+                'personne_id' => 5,
+                'personne_date' => '2018-12-10',
+                'personne_nom' => 'Philippe',
+                'personne_prenom' => 'Jonathan',
+                'personne_reference' => 'JP',
+                'personne_sexe' => 'Garçon',
+                'personne_age' => 19,
+                'personne_mail' => NULL,
+                'personne_telephone' => NULL,
+                'personne_voie' => NULL,
+                'personne_numero_voie' => NULL,
+                'personne_lieu_dit' => 'Les pierres',
+                'personne_code_postal' => '32600',
+                'personne_ville' => 'L\'isle-Jourdain',
+                'personne_suivi_anterieur' => 0,
+                'personne_contact' => 'Téléphone',
+                'personne_tranche_age' => '18-25',
+                'personne_beneficiaire' => 'Autre',
+                'personne_suivi_par' => 'Mission Locale',
+                'created_at' => '2018-12-10 13:07:34',
+                'updated_at' => NULL,
+            ),
         ));
         
         

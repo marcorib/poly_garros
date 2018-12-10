@@ -47,7 +47,7 @@ class CmsSettingsTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'name' => 'login_background_image',
-                'content' => 'uploads/2018-12/795ea963cef39763589db59e2aad1e9c.jpg',
+                'content' => 'uploads/2018-12/bfda7165e2e7279a52f6ebc1d5293a60.jpg',
                 'content_input_type' => 'upload_image',
                 'dataenum' => NULL,
                 'helper' => NULL,
@@ -164,7 +164,7 @@ class CmsSettingsTableSeeder extends Seeder
             array (
                 'id' => 12,
                 'name' => 'logo',
-                'content' => 'uploads/2018-12/627199f7a9237073fc7d4b32400a73ac.png',
+                'content' => 'uploads/2018-12/8cf6fc25990ac8799c7fe732dbee3b7b.png',
                 'content_input_type' => 'upload_image',
                 'dataenum' => NULL,
                 'helper' => NULL,

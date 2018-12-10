@@ -27,6 +27,16 @@ class FreinTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'personne_id' => 4,
             ),
+            1 => 
+            array (
+                'frein_id' => 2,
+                'frein_type' => 'Addictions',
+                'frein_date' => '2018-12-10',
+                'frein_status' => 'En cours',
+                'created_at' => '2018-12-10 13:08:37',
+                'updated_at' => NULL,
+                'personne_id' => 5,
+            ),
         ));
         
         

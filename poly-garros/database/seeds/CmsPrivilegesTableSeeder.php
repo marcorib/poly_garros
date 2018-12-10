@@ -26,6 +26,33 @@ class CmsPrivilegesTableSeeder extends Seeder
                 'created_at' => '2018-12-04 10:40:08',
                 'updated_at' => NULL,
             ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'Administrateur',
+                'is_superadmin' => 0,
+                'theme_color' => 'skin-blue',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'Utilisateur',
+                'is_superadmin' => 0,
+                'theme_color' => 'skin-yellow',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'Accueil Libre',
+                'is_superadmin' => 0,
+                'theme_color' => 'skin-green',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

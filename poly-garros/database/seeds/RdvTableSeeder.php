@@ -41,6 +41,18 @@ class RdvTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'personne_id' => 3,
             ),
+            2 => 
+            array (
+                'rdv_id' => 4,
+                'rdv_date' => '2018-12-14 10:00:00',
+                'rdv_lieu' => 'Salle polyvalente',
+                'rdv_comentaire' => NULL,
+                'rdv_activite' => 'Informer',
+                'rdv_orientation' => NULL,
+                'created_at' => '2018-12-10 13:09:11',
+                'updated_at' => NULL,
+                'personne_id' => 5,
+            ),
         ));
         
         

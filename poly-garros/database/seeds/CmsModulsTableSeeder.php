@@ -479,6 +479,20 @@ class CmsModulsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            33 => 
+            array (
+                'id' => 34,
+                'name' => 'Accueil Libre',
+                'icon' => 'fa fa-home',
+                'path' => 'accueil libre',
+                'table_name' => 'accueil_libre',
+                'controller' => 'AdminAccueilLibreController',
+                'is_protected' => 0,
+                'is_active' => 0,
+                'created_at' => '2018-12-10 10:55:45',
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         
