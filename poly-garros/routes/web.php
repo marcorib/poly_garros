@@ -15,10 +15,12 @@ Route::get('/', function () {
     return view('login');
 });
 
+
+
 // Route::get('/note', function () {
 // return view('note');
 // });
 
 
-Route::get('/note', 'NoteController@show');
-Route::post('/note', 'NoteController@insert');
+Route::get('/admin', 'NoteController@show');
+Route::post('/admin', 'NoteController@insert');

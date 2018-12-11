@@ -2,37 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
- use Illuminate\Http\Response;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
-use App\Note; // nom model
+use App\Note; 
 
 class NoteController extends Controller
 {
-    //
 
-    public function show()
+  public function show(){
 
-   {
-       $Note=Note::all();
-       return view('note', compact('Note'));
-       $myJSON = json_encode($$Note);
-
-       echo $myJSON;
-   }
-
-  
-    public function insert(Request $r)
-
-   {
-        $Note = new Note;
-        $Note->note_interne_emetteur =$r->input('commentFrom');
-        $Note->note_interne_recepteur =$r->input('commentTO');
-        $Note->note_interne_commentaire =$r->input('comment');
-
-        $Note->save();
-
-       
+    if(isset($_GET["delete"])){
+      $Note=Note::where('id',$_GET['delete'])->delete();
+      $Note=Note::all();
+      return view('home', ['Note'=> $Note]);
     }
+    else{
+      $Note=Note::all();
+      return view('home', ['Note'=> $Note]);
+    }
+  }
 
+  public function insert(Request $r){
+
+    $Note = new Note;
+    $Note->note_interne_emetteur = $r->input('commentFrom');
+    $Note->note_interne_recepteur = $r->input('commentTO');
+    $Note->note_interne_commentaire = $r->input('comment');
+    $Note->save();
+
+    return Redirect::to('admin');
+  }
 }
