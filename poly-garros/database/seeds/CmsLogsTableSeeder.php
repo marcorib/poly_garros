@@ -1301,6 +1301,42 @@ class CmsLogsTableSeeder extends Seeder
                 'created_at' => '2018-12-11 08:46:21',
                 'updated_at' => NULL,
             ),
+            107 => 
+            array (
+                'id' => 123,
+                'ipaddress' => '127.0.0.1',
+            'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+                'url' => 'http://127.0.0.1:8000/admin/login',
+                'description' => ': login par email avec adresse IP: ip',
+                'details' => '',
+                'id_cms_users' => 1,
+                'created_at' => '2018-12-11 09:05:48',
+                'updated_at' => NULL,
+            ),
+            108 => 
+            array (
+                'id' => 124,
+                'ipaddress' => '127.0.0.1',
+            'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+                'url' => 'http://127.0.0.1:8000/admin/login',
+                'description' => ': login par email avec adresse IP: ip',
+                'details' => '',
+                'id_cms_users' => 1,
+                'created_at' => '2018-12-11 09:11:30',
+                'updated_at' => NULL,
+            ),
+            109 => 
+            array (
+                'id' => 125,
+                'ipaddress' => '127.0.0.1',
+            'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+                'url' => 'http://127.0.0.1:8000/admin/login',
+                'description' => ': login par email avec adresse IP: ip',
+                'details' => '',
+                'id_cms_users' => 1,
+                'created_at' => '2018-12-11 10:28:40',
+                'updated_at' => NULL,
+            ),
         ));
         
         
