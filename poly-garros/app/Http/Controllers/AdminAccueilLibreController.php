@@ -12,7 +12,7 @@
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "accueil_libre_id,desc";
+			$this->orderby = "id,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -44,12 +44,12 @@
 			$this->form[] = ['label'=>'Genre','name'=>'accueil_libre_genre','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Fille;Garçon'];
 			$this->form[] = ['label'=>'Age','name'=>'accueil_libre_age','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'- 10 ans;10-14 ans;15-17 ans;18-25 ans; + 25 ans'];
 			$this->form[] = ['label'=>'Provenance','name'=>'accueil_libre_provenance','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Quartier;Extérieur'];
-			$this->form[] = ['label'=>'Objet','name'=>'accueil_libre_objet','type'=>'checkbox','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Photocopie/scan/impression ; Téléphone ; Café/thé ; Dossier administratif ; Démarche pôle emploi ;  Courrier/mail ;  Informel ; Informatique'];
+			$this->form[] = ['label'=>'Objet','name'=>'accueil_libre_objet','type'=>'checkbox','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Photocopie/scan/impression ; Téléphone ; Café/thé ; Dossier administratif ; Démarche pôle emploi ;  Courrier/mail ;  Informel ; Informatique ; Lettre ; Attestation ; Accompagnement physique ; Accompagnement à domicile ; Ecoute discussion ; Autre'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Date et Heure','name'=>'accueil_libre_heure','type'=>'datetime','validation'=>'required|date_format:H:i:s','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Heure','name'=>'accueil_libre_heure','type'=>'time','validation'=>'required|date_format:H:i:s','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Genre','name'=>'accueil_libre_genre','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Fille;Garçon'];
 			//$this->form[] = ['label'=>'Age','name'=>'accueil_libre_age','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'- 10 ans;10-14 ans;15-17 ans;18-25 ans; + 25 ans'];
 			//$this->form[] = ['label'=>'Provenance','name'=>'accueil_libre_provenance','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Quartier;Extérieur'];

@@ -10,9 +10,9 @@
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "personne_id";
+			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "frein_id,desc";
+			$this->orderby = "id,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -33,15 +33,15 @@
 			$this->col[] = ["label"=>"Date","name"=>"frein_date"];
 			$this->col[] = ["label"=>"Type","name"=>"frein_type"];
 			$this->col[] = ["label"=>"Status","name"=>"frein_status"];
-			$this->col[] = ["label"=>"Personne reference","name"=>"personne_id","join"=>"personne,personne_reference"];
+			$this->col[] = ["label"=>"Personne reference","name"=>"id","join"=>"personne,personne_reference"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Date','name'=>'frein_date','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Type','name'=>'frein_type','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Mobilité;Addictions;Sociaux;FLE;Alphabétisation;Handicap;Judiciaire;Culturel;Niveau d\'études;Santé;Psychologique;'];
+			$this->form[] = ['label'=>'Type','name'=>'frein_type','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Mobilité;Addictions;Sociaux;FLE;Alphabétisation;Handicap;Judiciaire;Culturel;Niveau d\'études;Santé;Psychologique;Autre'];
 			$this->form[] = ['label'=>'Status','name'=>'frein_status','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'En cours;Résolu'];
-			$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
+			$this->form[] = ['label'=>'Personne référence','name'=>'id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -49,7 +49,7 @@
 			//$this->form[] = ['label'=>'Date','name'=>'frein_date','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Type','name'=>'frein_type','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Mobilité;Addictions;Sociaux;FLE;Alphabétisation;Handicap;Judiciaire;Culturel;Niveau d\'études;Santé;Psychologique;'];
 			//$this->form[] = ['label'=>'Status','name'=>'frein_status','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'En cours;Résolu'];
-			//$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
+			//$this->form[] = ['label'=>'Personne référence','name'=>'id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
 			# OLD END FORM
 
 			/* 

@@ -12,7 +12,7 @@
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "personne_id";
 			$this->limit = "20";
-			$this->orderby = "rdv_id,desc";
+			$this->orderby = "id,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -35,7 +35,7 @@
 			$this->col[] = ["label"=>"Comentaire","name"=>"rdv_comentaire"];
 			$this->col[] = ["label"=>"Activite","name"=>"rdv_activite"];
 			$this->col[] = ["label"=>"Orientation","name"=>"rdv_orientation"];
-			$this->col[] = ["label"=>"Personne","name"=>"personne_id","join"=>"personne,personne_reference"];
+			$this->col[] = ["label"=>"Personne","name"=>"id","join"=>"personne,personne_reference"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -45,7 +45,7 @@
 			$this->form[] = ['label'=>'Comentaire','name'=>'rdv_comentaire','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Activite','name'=>'rdv_activite','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Première rencontre;CV et/ou lettre de motivation;Collecter les infos;Informer;Orienter;Accompagnement physique;Aide administrative;Consulter les annonces;Actualisation pole emploi;Création boite mail;Autre'];
 			$this->form[] = ['label'=>'Orientation','name'=>'rdv_orientation','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aide 32;AG2i;A3i;Intérim;Garros services;Mission locale;Pôle emploi;REGAR;Services sociaux;Médical;Autre'];
-			$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
+			$this->form[] = ['label'=>'Personne référence','name'=>'id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -55,7 +55,7 @@
 			//$this->form[] = ['label'=>'Comentaire','name'=>'rdv_comentaire','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Activite','name'=>'rdv_activite','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Première rencontre;CV et/ou lettre de motivation;Collecter les infos;Informer;Orienter;Accompagnement physique;Aide administrative;Consulter les annonces;Actualisation pole emploi;Création boite mail;Autre'];
 			//$this->form[] = ['label'=>'Orientation','name'=>'rdv_orientation','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aide 32;AG2i;A3i;Intérim;Garros services;Mission locale;Pôle emploi;REGAR;Services sociaux;Médical;Autre'];
-			//$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Personne référence','name'=>'personne_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
 			# OLD END FORM
 
 			/* 

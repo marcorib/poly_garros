@@ -19,23 +19,23 @@ class FreinTableSeeder extends Seeder
         \DB::table('frein')->insert(array (
             0 => 
             array (
-                'frein_id' => 1,
+                'id' => 4,
                 'frein_type' => 'Alphabétisation',
                 'frein_date' => '2018-12-13',
                 'frein_status' => 'En cours',
                 'created_at' => '2018-12-06 15:00:17',
-                'updated_at' => NULL,
-                'personne_id' => 4,
+                'updated_at' => '2018-12-10 17:24:44',
+                'fkId' => 4,
             ),
             1 => 
             array (
-                'frein_id' => 2,
+                'id' => 5,
                 'frein_type' => 'Addictions',
                 'frein_date' => '2018-12-10',
                 'frein_status' => 'En cours',
                 'created_at' => '2018-12-10 13:08:37',
-                'updated_at' => NULL,
-                'personne_id' => 5,
+                'updated_at' => '2018-12-10 17:24:35',
+                'fkId' => 5,
             ),
         ));
         

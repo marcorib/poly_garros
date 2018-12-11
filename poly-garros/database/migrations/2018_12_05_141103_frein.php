@@ -14,17 +14,16 @@ class Frein extends Migration
     public function up()
     {
         Schema::create('frein', function (Blueprint $table) {
-            $table->increments('frein_id');
+            $table->increments('id');
             $table->string('frein_type')->nullable();
             $table->string('frein_date')->nullable();
             $table->string('frein_status')->nullable();
             $table->timestamps();
-            $table->unsignedInteger('personne_id');
-			
+			$table->unsignedInteger('fkId');
   	    });
 
   	    Schema::table('frein', function($table) {
-       		$table->foreign('personne_id')->references('personne_id')->on('personne')
+       		$table->foreign('fkId')->references('id')->on('personne')
 				->onDelete('cascade')
 				->onUpdate('cascade');
    		});

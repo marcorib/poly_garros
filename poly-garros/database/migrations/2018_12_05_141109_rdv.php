@@ -14,19 +14,18 @@ class Rdv extends Migration
     public function up()
     {
         Schema::create('rdv', function (Blueprint $table) {
-            $table->increments('rdv_id');
+            $table->increments('id');
             $table->string('rdv_date');
             $table->string('rdv_lieu')->nullable();
             $table->string('rdv_comentaire')->nullable();
             $table->string('rdv_activite')->nullable();
             $table->string('rdv_orientation')->nullable();
             $table->timestamps();
-            $table->unsignedInteger('personne_id');
-            
+            $table->unsignedInteger('fkId');
         });
 
         Schema::table('rdv', function($table) {
-           $table->foreign('personne_id')->references('personne_id')->on('personne')
+           $table->foreign('fkId')->references('id')->on('personne')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

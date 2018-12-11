@@ -95,7 +95,7 @@ class CmsMenusTableSeeder extends Seeder
                 'id_cms_privileges' => 1,
                 'sorting' => NULL,
                 'created_at' => '2018-12-10 11:32:10',
-                'updated_at' => '2018-12-10 13:01:34',
+                'updated_at' => '2018-12-11 08:42:08',
             ),
         ));
         

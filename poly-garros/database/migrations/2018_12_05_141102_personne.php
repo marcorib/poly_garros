@@ -14,7 +14,7 @@ class Personne extends Migration
     public function up()
     {
         Schema::create('personne', function (Blueprint $table) {
-            $table->increments('personne_id');
+            $table->increments('id');
             $table->date('personne_date');
             $table->string('personne_nom')->nullable();
             $table->string('personne_prenom')->nullable();

@@ -19,17 +19,17 @@ class PersonneTableSeeder extends Seeder
         \DB::table('personne')->insert(array (
             0 => 
             array (
-                'personne_id' => 3,
+                'id' => 3,
                 'personne_date' => '2018-12-06',
                 'personne_nom' => 'dupon',
                 'personne_prenom' => 'andré',
                 'personne_reference' => 'AD',
                 'personne_sexe' => 'Garçon',
-                'personne_age' => 43,
+                'personne_age' => 53,
                 'personne_mail' => NULL,
                 'personne_telephone' => NULL,
-                'personne_voie' => NULL,
-                'personne_numero_voie' => NULL,
+                'personne_voie' => 'rue des fleures',
+                'personne_numero_voie' => '15',
                 'personne_lieu_dit' => NULL,
                 'personne_code_postal' => '32000',
                 'personne_ville' => 'Auch',
@@ -39,11 +39,11 @@ class PersonneTableSeeder extends Seeder
                 'personne_beneficiaire' => 'Autre',
                 'personne_suivi_par' => 'Médical',
                 'created_at' => '2018-12-06 10:57:01',
-                'updated_at' => NULL,
+                'updated_at' => '2018-12-10 17:25:41',
             ),
             1 => 
             array (
-                'personne_id' => 4,
+                'id' => 4,
                 'personne_date' => '2018-12-06',
                 'personne_nom' => NULL,
                 'personne_prenom' => NULL,
@@ -67,7 +67,7 @@ class PersonneTableSeeder extends Seeder
             ),
             2 => 
             array (
-                'personne_id' => 5,
+                'id' => 5,
                 'personne_date' => '2018-12-10',
                 'personne_nom' => 'Philippe',
                 'personne_prenom' => 'Jonathan',
@@ -78,7 +78,7 @@ class PersonneTableSeeder extends Seeder
                 'personne_telephone' => NULL,
                 'personne_voie' => NULL,
                 'personne_numero_voie' => NULL,
-                'personne_lieu_dit' => 'Les pierres',
+                'personne_lieu_dit' => 'La pierre',
                 'personne_code_postal' => '32600',
                 'personne_ville' => 'L\'isle-Jourdain',
                 'personne_suivi_anterieur' => 0,
@@ -87,7 +87,7 @@ class PersonneTableSeeder extends Seeder
                 'personne_beneficiaire' => 'Autre',
                 'personne_suivi_par' => 'Mission Locale',
                 'created_at' => '2018-12-10 13:07:34',
-                'updated_at' => NULL,
+                'updated_at' => '2018-12-10 16:00:27',
             ),
         ));
         
