@@ -19,7 +19,7 @@ class NoteController extends Controller
       return view('home', ['Note'=> $Note]);
     }
     else{
-      $Note=Note::all();
+      $Note=Note::orderby('id', 'desc')->get();
       return view('home', ['Note'=> $Note]);
     }
   }

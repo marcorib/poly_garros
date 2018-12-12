@@ -69,7 +69,7 @@
 			$this->form[] = ['label'=>'Contact','name'=>'personne_contact','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aller vers;Téléphone;Venu vers : Bouche à oreille;Orientation : Partenaires;Autre'];
 			$this->form[] = ['label'=>'Tranche Age','name'=>'personne_tranche_age','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'16-17;18-25;26-49;50 et plus'];
 			$this->form[] = ['label'=>'Beneficiaire','name'=>'personne_beneficiaire','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'RSA;AAH;ASS;ARE;ATE;Autre'];
-			$this->form[] = ['label'=>'Suivi Par','name'=>'personne_suivi_par','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aide 32;AG2I;A3I;CADA;Garros Services;Mission Locale;Pôle Emploi;REGAR;Social (UTAS...);Judiciaire (SPIP...);Médical;Autre'];
+			$this->form[] = ['label'=>'Suivi Par','name'=>'personne_suivi_par','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -91,7 +91,7 @@
 			//$this->form[] = ['label'=>'Contact','name'=>'personne_contact','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aller vers;Téléphone;Venu vers : Bouche à oreille;Orientation : Partenaires;Autre'];
 			//$this->form[] = ['label'=>'Tranche Age','name'=>'personne_tranche_age','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'16-17;18-25;26-49;50 et plus'];
 			//$this->form[] = ['label'=>'Beneficiaire','name'=>'personne_beneficiaire','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'RSA;AAH;ASS;ARE;ATE;Autre'];
-			//$this->form[] = ['label'=>'Suivi Par','name'=>'personne_suivi_par','type'=>'select','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Aide 32;AG2I;A3I;CADA;Garros Services;Mission Locale;Pôle Emploi;REGAR;Social (UTAS...);Judiciaire (SPIP...);Médical;Autre'];
+			//$this->form[] = ['label'=>'Suivi Par','name'=>'personne_suivi_par','type'=>'select2','validation'=>'min:1|max:255','width'=>'col-sm-10','dataenum'=>'Oui;Non'];
 			# OLD END FORM
 
 			/* 
