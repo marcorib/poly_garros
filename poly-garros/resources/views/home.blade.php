@@ -1,80 +1,48 @@
 @extends('crudbooster::admin_template')
 
-@section('content')
+ @section('content')
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-10">
-
-			<form  method="post">
-				{{ csrf_field() }}
-
-
-				<div class="cities">
-					<label for="usr">De :</label>
-					<input type=" " class=" form-control" name="commentFrom" >
-
-					<label for="pwd">Pour :</label>
-					<input type=" " class=" form-control" name="commentTO">
-
-					<div class="">
-						<label for="comment">Commentaire :</label>
-						<textarea class="form-control" rows="5" name="comment"></textarea>
-					</div>
-
-					<input class="btn btn-primary btn-md "name="submit" type="submit" >
+	  <div class="col-sm-10">
+		<form  method="post">
+			{{ csrf_field() }}
+			<div class="cities">
+				<label for="usr">De :</label>
+				<input type=" " class=" form-control" name="commentFrom" >
+				<label for="pwd">Pour :</label>
+				<input type=" " class=" form-control" name="commentTO">
+				<label for="pwd">Date :</label>
+				<input type="date" class=" form-control" name="date">
+				<div class="">
+				<label for="comment">Commentaire :</label>
+				<textarea class="form-control" rows="5" name="comment"></textarea>
 				</div>
-
-			</form> 
-		</div>
-		<div class="col-sm-1"></div>
-	</div>
-</div>
-
-<!-- formulaire d'envoi -->
-
-<div class="container">
-
-	<div class="row">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-10">
-
-			@foreach($Note as $key)
-
-			<div class="panel-body msg_container_base ">
-
-				<div class="row msg_container base_receive btn-primary">
-
-					<div class="col-md-10 col-xs-12">
-
-						<div class="messages msg_receive">
-							
-
-							<button type="button" class="btn btn-outline-secondary btn-rounded waves-effect">De : <label id=" " name="">{{$key ->note_interne_emetteur}}</label></button>
-
-							<button type="button" class="btn btn-outline-secondary btn-rounded waves-effect">Pour : <label id=" " name="">{{$key ->note_interne_recepteur}}</label></button>
-							
-							<form  method="get" action="admin">
-								<button name="delete" type="submit" class="btn btn-default btn-close pull-right" id="{{$key ->id}}" value="{{$key ->id}}">Supprimer</button>
-							</form>
-							
-							<div class="alert form-control-sm" role="alert" id=" " name="">{{$key ->note_interne_commentaire}}</div>
-						</div>
-
-					</div>
-				</div>                 								
+				<input class="btn btn-primary btn-md "name="submit" type="submit" >
 			</div>
-			
-
-			@endforeach
-		</div>
+		</form> 
+	  </div>
 	</div>
-	<div class="col-sm-1"></div>
-
-<!-- button top -->
-	<button onclick="topFunction()" id="myBtn" title="Retour haut de page" class="">Top</button>
-
+	<!-- formulaire d'envoi -->
+	<div class="row">
+	@foreach($Note as $key)
+		<div class="col-sm-10">
+			<div class=" cities">
+				<form  method="get" action="admin">
+					<div class="mt-6" >
+						<button type="button" class="btn btn-primary btn-md ">De : <label id=" " name="">{{$key ->note_interne_emetteur}}</label></button>
+						<button type="button" class="btn btn-primary btn-md ">Pour : <label id=" " name="">{{$key ->note_interne_recepteur}}</label></button>
+						<button type="button" class="btn btn-primary btn-md ">Date : <label id=" " name="">{{$key ->note_interne_date}}</label></button>
+						<button name="delete" type="submit" class="btn btn-danger pull-right" id="{{$key ->id}}" value="{{$key ->id}}">Supprimer</button>
+					</div>
+					<div class="alert form-control-sm" role="alert" id=" " name="">{{$key ->note_interne_commentaire}}</div>
+				</form>
+			</div>                								
+	    </div>
+	@endforeach
+	</div>
+	<!-- button top -->
+	<button onclick="topFunction()" id="myBtn" title="Retour haut de page" class=""><span id="btnTop">&#8679;</span></button>
 </div>
 
 <!-- affichage des notes -->
@@ -85,15 +53,17 @@
 
 	window.onscroll = function() {scrollFunction()};
 
-	function scrollFunction() {
-	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("myBtn").style.display = "block";
-	} else {
+	function scrollFunction() 
+	{
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+		{
+			document.getElementById("myBtn").style.display = "block";
+		} 
+		else {
 		document.getElementById("myBtn").style.display = "none";
 	}
 	}
 
-	// When the user clicks on the button, scroll to the top of the document
 	function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
@@ -103,6 +73,10 @@
 
 
 <style>
+
+#btnTop{
+	font-size: 35px;
+}
 
 .cities 
 	{
@@ -121,13 +95,13 @@
 		bottom: 20px;
 		right: 30px;
 		z-index: 99;
-		font-size: 18px;
+		font-size: 10px;
 		border: none;
 		outline: none;
 		background-color: rgb(23, 33, 90);
 		color: white;
 		cursor: pointer;
-		padding: 15px;
+		padding: 5px;
 		border-radius: 5px;
 	}
 

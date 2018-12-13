@@ -385,6 +385,22 @@ class CmsMenusTableSeeder extends Seeder
                 'created_at' => '2018-12-12 15:01:11',
                 'updated_at' => '2018-12-12 15:02:09',
             ),
+            23 => 
+            array (
+                'id' => 35,
+                'name' => 'Gestion utilisateurs',
+                'type' => 'Module',
+                'path' => 'users',
+                'color' => 'normal',
+                'icon' => 'fa fa-gear',
+                'parent_id' => 0,
+                'is_active' => 1,
+                'is_dashboard' => 0,
+                'id_cms_privileges' => 1,
+                'sorting' => NULL,
+                'created_at' => '2018-12-13 12:49:13',
+                'updated_at' => '2018-12-13 13:31:30',
+            ),
         ));
         
         

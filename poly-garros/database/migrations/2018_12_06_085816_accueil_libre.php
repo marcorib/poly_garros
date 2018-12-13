@@ -16,6 +16,7 @@ class AccueilLibre extends Migration
         Schema::create('accueil_libre', function (Blueprint $table) {
             $table->increments('id');
             $table->time('accueil_libre_heure');
+            $table->date('accueil_libre_date');
             $table->string('accueil_libre_genre');
             $table->string('accueil_libre_age');
             $table->string('accueil_libre_provenance');

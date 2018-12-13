@@ -30,6 +30,7 @@ class NoteController extends Controller
     $Note->note_interne_emetteur = $r->input('commentFrom');
     $Note->note_interne_recepteur = $r->input('commentTO');
     $Note->note_interne_commentaire = $r->input('comment');
+    $Note->note_interne_date = $r->input('date');
     $Note->save();
 
     return Redirect::to('admin');

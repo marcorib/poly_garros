@@ -28,7 +28,7 @@ class Personne extends Migration
             $table->string('personne_lieu_dit')->nullable();
             $table->string('personne_code_postal');
             $table->string('personne_ville');
-            $table->boolean('personne_suivi_anterieur')->default(false);
+            $table->string('personne_suivi_anterieur');
             $table->string('personne_contact');
             $table->string('personne_tranche_age');
             $table->string('personne_beneficiaire')->nullable();

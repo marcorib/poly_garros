@@ -15,6 +15,7 @@ class NoteInterne extends Migration
     {
         Schema::create('note_interne', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('note_interne_date');
             $table->string('note_interne_emetteur');
             $table->string('note_interne_recepteur');
             $table->text('note_interne_commentaire');
