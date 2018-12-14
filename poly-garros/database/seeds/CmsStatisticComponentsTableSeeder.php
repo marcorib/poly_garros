@@ -299,7 +299,7 @@ class CmsStatisticComponentsTableSeeder extends Seeder
                 'area_name' => 'area5',
                 'sorting' => 1,
                 'name' => NULL,
-            'config' => '{"name":"R\\u00e9partition par \\u00e2ge","sql":"SELECT (personne_tranche_age) AS label, COUNT(id) AS value FROM `personne` GROUP BY (personne_tranche_age)","area_name":"Tranche d\'\\u00e2ge","goals":null}',
+            'config' => '{"name":"R\\u00e9partition par \\u00e2ge","sql":"SELECT (personne_tranche_age) AS label, COUNT(id) AS value FROM `personne` GROUP BY (personne_tranche_age)","area_name":"Nombre","goals":null}',
                 'created_at' => '2018-12-13 13:07:31',
                 'updated_at' => NULL,
             ),

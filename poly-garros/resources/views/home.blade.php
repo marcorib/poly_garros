@@ -9,14 +9,14 @@
 			{{ csrf_field() }}
 			<div class="cities">
 				<label for="usr">De :</label>
-				<input type=" " class=" form-control" name="commentFrom" >
+				<input type=" " class="form-control" name="commentFrom" placeholder="champ obligatoire">
 				<label for="pwd">Pour :</label>
-				<input type=" " class=" form-control" name="commentTO">
+				<input type=" " class=" form-control" name="commentTO" placeholder="champ obligatoire">
 				<label for="pwd">Date :</label>
 				<input type="date" class=" form-control" name="date">
 				<div class="">
 				<label for="comment">Commentaire :</label>
-				<textarea class="form-control" rows="5" name="comment"></textarea>
+				<textarea class="form-control" rows="5" name="comment" placeholder="champ obligatoire"></textarea>
 				</div>
 				<input class="btn btn-primary btn-md "name="submit" type="submit" >
 			</div>

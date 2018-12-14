@@ -20,7 +20,7 @@ class Personne extends Migration
             $table->string('personne_prenom')->nullable();
             $table->string('personne_reference');
             $table->string('personne_sexe');
-            $table->integer('personne_age');
+            $table->integer('personne_age')->nullable();
             $table->string('personne_mail')->nullable();
             $table->string('personne_telephone')->nullable();
             $table->string('personne_voie')->nullable();

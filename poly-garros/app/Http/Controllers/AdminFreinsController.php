@@ -46,7 +46,7 @@
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Date','name'=>'frein_date','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Type','name'=>'frein_type','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Mobilité;Addictions;Sociaux;FLE;Alphabétisation;Handicap;Judiciaire;Culturel;Niveau d\'études;Santé;Psychologique;Autre'];
-			//$this->form[] = ['label'=>'Personne référence','name'=>'fkId','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Personne référence','name'=>'fkId','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'personne,personne_reference'];
 			# OLD END FORM
 
 			/* 
